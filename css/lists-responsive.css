@@ -63,6 +63,13 @@ div #item a {
 .item5 { background-color: #f2bc22; }
 .item6 { background-color: #808080; }
 
+.item1:hover, item1:active { background-color: #808080; }
+.item2:hover, item2:active { background-color: #808080; }
+.item3:hover, item3:active { background-color: #808080; }
+.item4:hover, item4:active { background-color: #808080; }
+.item5:hover, item5:active { background-color: #808080; }
+.item6:hover, item6:active { background-color: #808080; }
+
 
 #image-artista-list {
     float: left;
