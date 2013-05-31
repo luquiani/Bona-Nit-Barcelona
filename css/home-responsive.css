@@ -60,17 +60,24 @@
 }
 
 #cell-1 {
+	background-image: url(../images/icono-artistas.gif);
+	background-repeat: no-repeat;
+	background-size:200% auto; 
     float: left;
     height: auto;
     clear: none;
     width: 28%;
+    height: auto;
     margin: 0px;
     position: relative;
     top: 0px;
     left: 0px;
-    text-align: center;    
+    text-align: center;      
 }
 #cell-2 {
+	background-image: url(../images/icono-horarios.gif);
+	background-repeat: no-repeat;
+	background-size:200% auto; 
     float: left;
     height: auto;
     clear: none;
@@ -82,6 +89,9 @@
     text-align: center;       
 }
 #cell-3 {
+	background-image: url(../images/icono-sostenibilidad.gif);
+	background-repeat: no-repeat;
+	background-size:200% auto; 
     float: right;
     height: auto;
     clear: none;
@@ -92,6 +102,72 @@
     left: 0px;
     text-align: center;       
 }
+#cell-4 {
+	background-image: url(../images/icono-sponsors.gif);
+	background-repeat: no-repeat;
+	background-size:200% auto; 
+    float: left;
+    height: auto;
+    clear: none;
+    width: 28%;
+    height: auto;
+    margin: 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;      
+}
+#cell-5{
+	background-image: url(../images/icono-como-llegar.gif);
+	background-repeat: no-repeat;
+	background-size:200% auto; 
+    float: left;
+    height: auto;
+    clear: none;
+    width: 28%;
+    margin: 0px 0px 0px 8%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;       
+}
+#cell-6 {
+	background-image: url(../images/icono-info.gif);
+	background-repeat: no-repeat;
+	background-size:200% auto; 
+    float: right;
+    height: auto;
+    clear: none;
+    width: 28%;
+    margin: 0px 0% 0px 0px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;       
+}
+#cell-1:hover, #cell-1:active {
+	background-position-x: 100%;
+}
+
+#cell-2:hover #cell-1:active {
+	background-position-x: 100%;
+}
+#cell-3:hover, #cell-1:active {
+	background-position-x: 100%;
+}
+
+#cell-4:hover, #cell-1:active {
+	background-position-x: 100%;
+}
+
+#cell-5:hover, #cell-1:active {
+	background-position-x: 100%;
+}
+
+#cell-6:hover, #cell-1:active {
+	background-position-x: 100%;
+}
+
 #image-icon {
     width: 80%;
     max-width: 80%;
@@ -124,6 +200,8 @@
     min-height: 0px;
     min-width: 0.5em;
 }
+
+
 
 /* IPAD */
 @media only screen and (max-width: 1024px) and (orientation: landscape){
