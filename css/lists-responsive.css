@@ -70,6 +70,19 @@ div #item a {
 .item5:hover, item5:active { background-color: #808080; }
 .item6:hover, item6:active { background-color: #808080; }
 
+.separator {
+	background-image: url('../images/texture.png');
+   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 6px;
+	line-height: 40px;
+	padding-left: 20px;
+	color: white;
+	margin: 5px 0 5px 0;	
+	height: 40px;	
+	background-color: gray;
+	-moz-border-radius:  10px 10px 0 0 ;
+	border-radius: 10px 10px 0 0 ;	
+	
+}
 
 #image-artista-list {
     float: left;

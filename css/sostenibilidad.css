@@ -4,6 +4,13 @@
 
 
 #sostenibilidad h2 {
+	font-size: 16px;
+	color: #04826b;	
+	text-shadow:none;	
+}
+
+#sostenibilidad h3 {
+	font-size: 16px;
 	background: transparent url("../images/bullet-sostenibilidad.gif") no-repeat left center;
 	padding-left: 25px;
 	margin-top: 30px;
@@ -40,10 +47,6 @@
 
 
 
-
-
-
-
 #listado-sponsors-4 {
 	text-align: center;
 	margin: auto;
@@ -66,6 +69,22 @@
 
 #listado-sponsors-2 #sponsors-2{
 	width: 50%;
+	float: left;
+	margin-bottom: 30px;
+}	
+
+
+
+
+#listado-sponsors, #listado-sponsors-3 {
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	display: block;
+}
+
+#listado-sponsors-3 #sponsors-3{
+	width: 33%;
 	float: left;
 	margin-bottom: 30px;
 }	
@@ -97,6 +116,20 @@
 		float: left;	
 		margin-bottom: 15px;
 	}	
+	
+	#listado-sponsors-3 #sponsors-3{
+		width: 50%;
+		float: left;
+		margin-bottom: 30px;
+	}	
+
+	#listado-sponsors-3 #sponsors-3-ulitmo{
+		width: 100%;
+		float: left;
+		margin-bottom: 30px;
+	}	
+	
+
 }
 
 @media only screen and (max-width:240px) {
@@ -128,7 +161,7 @@
 #map_canvas {
 	width: 100%;
 	height: 300px;
-	background-color: blue;	
+	background-color: #f7f7f7;	
 }
 
 

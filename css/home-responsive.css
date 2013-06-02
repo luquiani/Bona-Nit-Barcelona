@@ -149,24 +149,25 @@
 	background-position-x: 100%;
 }
 
-#cell-2:hover #cell-1:active {
+#cell-2:hover, #cell-2:active {
 	background-position-x: 100%;
 }
-#cell-3:hover, #cell-1:active {
-	background-position-x: 100%;
-}
-
-#cell-4:hover, #cell-1:active {
+#cell-3:hover, #cell-3:active {
 	background-position-x: 100%;
 }
 
-#cell-5:hover, #cell-1:active {
+#cell-4:hover, #cell-4:active {
 	background-position-x: 100%;
 }
 
-#cell-6:hover, #cell-1:active {
+#cell-5:hover, #cell-5:active {
 	background-position-x: 100%;
 }
+
+#cell-6:hover, #cell-6:active {
+	background-position-x: 100%;
+}
+
 
 #image-icon {
     width: 80%;

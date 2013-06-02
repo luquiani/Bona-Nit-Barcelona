@@ -3375,6 +3375,7 @@ h1,  h2 {
 
 p {
 	font-size: 12px;
+	line-height: 2em;	
 }
 
 
@@ -3420,6 +3421,21 @@ p {
  
 #home {
 	background-color: #ede8df;
+}
+
+#about2 {
+	background-color: #a5a4a4;
+} 
+
+#seccion-about p {
+	margin-top: 40px;
+	color: white;
+	line-height: 0px;	
+	text-align: center;
+} 
+
+#seccion-about p a {
+	color: white;
 }
 
 
