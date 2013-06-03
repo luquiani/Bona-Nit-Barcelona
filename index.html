@@ -79,7 +79,6 @@
 		</div><!-- /header -->
 	
 		<div data-role="content" id="content-warpper">			
-		   <button onClick="mostrarUbicacion()"> mostrar mi ubicacion </button>			 <div id="map_canvas"></div>
 				<div class="indicaciones">		
 						<h2>Poble Espanyol</h2>
 						
@@ -88,10 +87,10 @@
 						
 							<p></a></p>
 							
-							<p><a href="<#como-llegar-zoom"><img src="images/como-llegar/mapa.gif"><strong>Ver mapa</strong></a></p>
+							<p><a href="#como-llegar-zoom"><img src="images/como-llegar/mapa.gif"><strong>Ver mapa</strong></a></p>
 	
 						
-							<p><a href="https://maps.google.es/maps?f=q&source=s_q&hl=es&geocode=&q=poble+espanyol+de+montjuic&sll=41.369,2.147&sspn=0.023189,0.038495&g=poble+espanyol+de+barcelona+08038&ie=UTF8&z=15&iwloc=A" target="_blank"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
+							<p><a href="#como-llegar-googlemaps"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
 							
 							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L1"  rel="external"><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Parada Espanya WEB APP</span></a></p>
 							
@@ -110,6 +109,20 @@
 		
 	</div>
 <!-- /End Como llegar -->
+
+<!-- Start of Google Maps -->
+	<div data-role="page" id="como-llegar-googlemaps">
+	
+	
+		<div data-role="header" class="header">
+			<h1>Como llegar - Mapa</h1>
+			<a href="#como-llegar" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">volver</a>
+		</div><!-- /header -->
+		
+			<div id="map_canvas" style="width:100%; height:100%;"></div>
+
+	</div>
+<!-- /End Google Maps -->
 
 
 
