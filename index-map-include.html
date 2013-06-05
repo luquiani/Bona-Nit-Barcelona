@@ -16,47 +16,59 @@
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.mobile-1.3.1.js"></script>
 
+<script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?sensor=true">
+</script>
 
+	<script type="text/javascript">
+	
+		var map
+		var marcador
+		
+		  function initialize() {
+		    var myOptions = {
+			  zoom: 16,
+			  center: new google.maps.LatLng(41.3687, 2.1471),
+
+
+			    mapTypeControl: true,
+			    mapTypeControlOptions: {
+			      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+			    },
+			    zoomControl: true,
+
+			    mapTypeId: google.maps.MapTypeId.ROADMAP
+			  }
+
+		  
+		    map = new google.maps.Map(document.getElementById("map_canvas"),
+		        myOptions);
+				
+				
+		  var image = 'images/bnb-marker.png';
+		  var myLatLng = new google.maps.LatLng(41.3687, 2.1471);
+		  var beachMarker = new google.maps.Marker({
+		      position: myLatLng,
+		      map: map,
+		      icon: image
+			})
+		  }
+	
+	</script>
+
+	<script type="text/javascript">
+
+	function DelayUpdate() {
+		setTimeout(function(){update()},200);
+		};
+
+		function update() {
+			google.maps.event.trigger(map, "resize");
+		};
+	</script>
+	
 </head>
 
-
-<!-- Start of Como llegar -->
-	<div data-role="page" id="como-llegar">
-	
-		<div data-role="header" class="header">
-			<h1>Como llegar</h1>
-			<a href="#home" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
-		</div><!-- /header -->
-	
-		<div data-role="content" id="content-warpper">			
-				<div class="indicaciones">		
-						<h2>Poble Espanyol</h2>
-						
-							<p>Av. de Francesc Ferrer i Gu&agrave;rdia, 13</br>08038 Barcelona</p>
-						
-							<p></a></p>
-
-							<p><a href="mapa-2.html" ><img src="images/como-llegar/google-maps.gif">Google Map DIRECTO</a></p>
-							
-							<p><a href="#como-llegar-googlemaps" onclick="DelayUpdate()" data-transition="fade"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
-							
-							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L1"  rel="external"><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Parada Espanya WEB APP</span></a></p>
-							
-							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L3" target="_blank"><img src="images/como-llegar/metro.gif">Metro<img  class="metro" src="images/como-llegar/metroL3.gif"><span class="parada">Parada Espanya</span></a></p>
-							
-							<p><a href="http://www.fgc.net/cat/index.asp" target="_blank"><img src="images/como-llegar/fc.gif" target="_blank">Ferrocarril Catalans<span class="parada">Parada Espanya</span></a></p>
-							
-							<p>
-								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/13" target="_blank"><img src="images/como-llegar/bus.gif">Auto bus<span class="bus">13</span></a>
-								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/150" target="_blank"><span class="bus" style="margin-left:-5px;">150</span></a>
-							</p>
-
-			</div><!-- /content -->
-				
-		</div><!-- /content -->
-		
-	</div>
-<!-- /End Como llegar -->
 
 <!-- Start of  -->
 	<div data-role="page" id="como-llegar-googlemaps">
@@ -67,11 +79,8 @@
 			<a href="#como-llegar" data-icon="arrow-l" data-transition="fade"class="ui-btn-right">volver</a>
 		</div><!-- /header -->
 		
-		<div id="map_canvas" style="width:100%; height:100%;">
-			
-			<iframe name="inlineframe" src="mapa-web.html" frameborder="0" scrolling="auto" width="100%" height="100%" marginwidth="5" marginheight="5" ></iframe>
-			
-		</div>
+		<div id="map_canvas" style="width:100%; height:100%;"></div>
+
 	</div>
 <!-- /End Google Maps --> 
 
@@ -467,7 +476,41 @@
 <!-- /End sponsors -->
 
 
+<!-- Start of Como llegar -->
+	<div data-role="page" id="como-llegar">
+	
+		<div data-role="header" class="header">
+			<h1>Como llegar</h1>
+			<a href="#home" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper">			
+				<div class="indicaciones">		
+						<h2>Poble Espanyol</h2>
+						
+							<p>Av. de Francesc Ferrer i Gu&agrave;rdia, 13</br>08038 Barcelona</p>
+						
+							<p></a></p>
+							
+							<p><a href="#como-llegar-googlemaps" onclick="DelayUpdate()" data-transition="fade"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
+							
+							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L1"  rel="external"><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Parada Espanya WEB APP</span></a></p>
+							
+							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L3" target="_blank"><img src="images/como-llegar/metro.gif">Metro<img  class="metro" src="images/como-llegar/metroL3.gif"><span class="parada">Parada Espanya</span></a></p>
+							
+							<p><a href="http://www.fgc.net/cat/index.asp" target="_blank"><img src="images/como-llegar/fc.gif" target="_blank">Ferrocarril Catalans<span class="parada">Parada Espanya</span></a></p>
+							
+							<p>
+								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/13" target="_blank"><img src="images/como-llegar/bus.gif">Auto bus<span class="bus">13</span></a>
+								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/150" target="_blank"><span class="bus" style="margin-left:-5px;">150</span></a>
+							</p>
 
+			</div><!-- /content -->
+				
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Como llegar -->
 
 
 
