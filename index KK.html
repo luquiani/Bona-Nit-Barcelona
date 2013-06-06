@@ -2,7 +2,7 @@
 <html> 
 <head> 	
     <meta charset="UTF-8" />
-	<title>DIV MAPA PRINCIPAL</title> 
+	<title>Page Title</title> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 	<link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
@@ -41,17 +41,6 @@
 
 <body >
 
-<!-- Start of  MAPA -->
-	<div data-role="page" id="como-llegar-googlemaps">
-		<div data-role="header" class="header">
-			<h1>Como llegar - Mapa</h1>
-			<a href="#como-llegar" data-icon="arrow-l" data-transition="fade"class="ui-btn-right">volver</a>
-		</div><!-- /header -->
-		
-		  <div id="map-canvas"></div>
-	</div>
-<!-- /End Google Maps --> 
-
 <!-- Start of Como llegar -->
 	<div data-role="page" id="como-llegar">
 		<div data-role="header" class="header">
@@ -69,7 +58,16 @@
 	</div>
 <!-- /End Como llegar -->
 
-
+<!-- Start of  MAPA -->
+	<div data-role="page" id="como-llegar-googlemaps">
+		<div data-role="header" class="header">
+			<h1>Como llegar - Mapa</h1>
+			<a href="#como-llegar" data-icon="arrow-l" data-transition="fade"class="ui-btn-right">volver</a>
+		</div><!-- /header -->
+		
+		  <div id="map-canvas"></div>
+	</div>
+<!-- /End Google Maps --> 
 
 </body>
 </html>
