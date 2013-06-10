@@ -15,38 +15,17 @@
 	<script src="phonegap.js"></script>	<!-- No tien que estar en /js  folder -->
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.mobile-1.3.1.js"></script>
-	
-	
-	    <link href="googlemaps.css" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-	<script>
-		function initialize() {
-		  var mapOptions = {
-		    zoom: 10,
-		    center: new google.maps.LatLng(41.3687, 2.1471),
-		    mapTypeId: google.maps.MapTypeId.ROADMAP
-		  }
-		  var map = new google.maps.Map(document.getElementById('map-canvas'),
-		                                mapOptions);
-		
-		  var image = 'images/bnb-marker.png';
-		  var myLatLng = new google.maps.LatLng(41.3687, 2.1471);
-		  var beachMarker = new google.maps.Marker({
-		      position: myLatLng,
-		      map: map,
-		      icon: image
-		  });
-		}
-		
-		google.maps.event.addDomListener(window, 'load', initialize)
+	<script src="js/map.js"></script>
+
+	<script type="text/javascript"
+	    src="http://maps.googleapis.com/maps/api/js?sensor=true">
 	</script>
+	
+	
+</head> 
 
-
-</head>
-
-<body onload="initialize()">
-
+<body>
 
 <!-- Start of Como llegar -->
 	<div data-role="page" id="como-llegar">
@@ -62,11 +41,13 @@
 						
 							<p>Av. de Francesc Ferrer i Gu&agrave;rdia, 13</br>08038 Barcelona</p>
 						
+						
 							<p></a></p>
-
-							<p><a href="mapa-2.html" ><img src="images/como-llegar/google-maps.gif">Google Map DIRECTO</a></p>
 							
-							<p><a href="#como-llegar-googlemaps" onclick="DelayUpdate()" data-transition="fade"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
+							<p><a href="#como-llegar-zoom"><img src="images/como-llegar/mapa.gif"><strong>Ver mapa</strong></a></p>
+	
+						
+							<p><a href="#map-page"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
 							
 							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L1"  rel="external"><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Parada Espanya WEB APP</span></a></p>
 							
@@ -86,22 +67,18 @@
 	</div>
 <!-- /End Como llegar -->
 
-<!-- Start of  -->
-	<div data-role="page" id="como-llegar-googlemaps">
 
-		
+<div data-url="map-page" data-role="page" id="map-page">
 		<div data-role="header" class="header">
-			<h1>Como llegar - Mapa</h1>
-			<a href="#como-llegar" data-icon="arrow-l" data-transition="fade"class="ui-btn-right">volver</a>
+			<h1>Como llegar</h1>
+			<a href="#home" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
 		</div><!-- /header -->
-		
-		<div id="map_canvas" style="width:100%; height:100%;">
-			
-			<iframe name="inlineframe" src="mapa-web.html" frameborder="0" scrolling="auto" width="100%" height="100%" marginwidth="5" marginheight="5" ></iframe>
-			
-		</div>
-	</div>
-<!-- /End Google Maps --> 
+        <div data-role="content" id="map-canvas">
+            <!-- map loads here... -->
+        </div>
+    </div>
+
+
 
 
 <!-- Start of Home -->
@@ -492,9 +469,6 @@
 		
 	</div>
 <!-- /End sponsors -->
-
-
-
 
 
 
