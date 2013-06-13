@@ -21,73 +21,6 @@
 
 <body>
 
-<!-- Start of Mapa Evento -->
-	<div data-role="page" id="mapa-evento">
-
-		<div data-role="header" class="header">
-			<h1>Mapa Evento Y</h1>
-			<a href="#" data-rel="back"  data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Volver</a>
-		</div><!-- /header -->
-	
-		<div data-role="content" id="content-warpper-map">			
-				<div class="mapa-evento">		
-					<img src="images/mapa-evento.jpg">	
-								
-				</div><!-- /content -->
-						
-		</div><!-- /content -->
-		
-	</div>
-<!-- /End Mapa Evento  -->
-
-
-<!-- Start of Como llegar -->
-	<div data-role="page" id="como-llegar">
-						<div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
-	
-				    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-					 
-				    <iframe src="map.html" width="320px" height="480px" seamless style="margin-left:-15px;"></iframe>
-					 
-				    </div>
-
-		<div data-role="header" class="header">
-			<h1>Como llegar</h1>
-			<a href="#home" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
-		</div><!-- /header -->
-	
-		<div data-role="content" id="content-warpper">			
-				<div class="indicaciones">		
-				
-						<h2>Poble Espanyol</h2>
-									
-
-						<a href="#popupMap" data-rel="popup">Open Popup</a>
-
-						<p>Av. de Francesc Ferrer i Gu&agrave;rdia, 13</br>08038 Barcelona</p>
-						
-							<a data-role="button"  data-transition="flow" href="map.html">MAPA HTML</a>
-							
-							<p><a href="#como-llegar-googlemaps data-transition="fade"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
-							
-							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L1" target="_blank"><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Parada Espanya WEB APP</span></a></p>
-							
-							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L3" target="_blank"><img src="images/como-llegar/metro.gif">Metro<img  class="metro" src="images/como-llegar/metroL3.gif"><span class="parada">Parada Espanya</span></a></p>
-							
-							<p><a href="http://www.fgc.net/cat/index.asp" target="_blank"><img src="images/como-llegar/fc.gif" target="_blank">Ferrocarril Catalans<span class="parada">Parada Espanya</span></a></p>
-							
-							<p>
-								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/13" target="_blank"><img src="images/como-llegar/bus.gif">Auto bus<span class="bus">13</span></a>
-								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/150" target="_blank"><span class="bus" style="margin-left:-5px;">150</span></a>
-							</p>
-
-			</div><!-- /content -->
-				
-		</div><!-- /content -->
-		
-	</div>
-<!-- /End Como llegar -->
-
 
 <!-- Start of Home -->
 	<div data-role="page" id="home">
@@ -183,16 +116,95 @@
 <!-- /End home -->
 
 
+<!-- Start of Como llegar -->
+	<div data-role="page" id="como-llegar">
+						<div data-role="popup" id="popupMap" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+	
+				    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+					 
+				    <iframe src="map.html" width="320px" height="480px" seamless style="margin-left:-15px;"></iframe>
+					 
+				    </div>
+
+		<div data-role="header" class="header">
+			<h1>Como llegar</h1>
+			<a href="#home" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper">			
+				<div class="indicaciones">		
+				
+						<h2>Poble Espanyol</h2>
 
 
+						<p>Av. de Francesc Ferrer i Gu&agrave;rdia, 13</br>08038 Barcelona</p>
 
+							<p><a href="#como-llegar-googlemaps" data-transition="fade"><img src="images/como-llegar/google-maps.gif">Google Map</a></p>
+
+							<p><a href="#mapa-pueblo" data-transition="slide"><img src="images/como-llegar/google-maps.gif">Ver Mapa</a></p>
+							
+							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L1" target="_blank"><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Parada Espanya WEB APP</span></a></p>
+							
+							<p><a href="http://www.tmb.cat/es/detall-linia-metro/-/linia/L3" target="_blank"><img src="images/como-llegar/metro.gif">Metro<img  class="metro" src="images/como-llegar/metroL3.gif"><span class="parada">Parada Espanya</span></a></p>
+							
+							<p><a href="http://www.fgc.net/cat/index.asp" target="_blank"><img src="images/como-llegar/fc.gif" target="_blank">Ferrocarril Catalans<span class="parada">Parada Espanya</span></a></p>
+							
+							<p>
+								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/13" target="_blank"><img src="images/como-llegar/bus.gif">Auto bus<span class="bus">13</span></a>
+								<a href="http://www.tmb.cat/es/linia-de-bus/-/bus/150" target="_blank"><span class="bus" style="margin-left:-5px;">150</span></a>
+							</p>
+
+			</div><!-- /content -->
+				
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Como llegar -->
+
+<!-- Start of Mapa Como llegar -->
+	<div data-role="page" id="mapa-pueblo">
+
+		<div data-role="header" class="header">
+			<h1>Mapa Cómo Llegar</h1>
+			<a href="#como-llegar" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Volver</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper-map">			
+				<div class="mapa-pueblo">		
+					<img src="images/mapa-high.jpg">	
+								
+				</div><!-- /content -->
+						
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Mapa Evento  -->
+
+<!-- Start of Mapa Evento -->
+	<div data-role="page" id="mapa-evento">
+
+		<div data-role="header" class="header">
+			<h1>Mapa Evento</h1>
+			<a href="#home" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Volver</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper-map">			
+				<div class="mapa-evento">		
+					<img src="images/mapa-evento.jpg">	
+								
+				</div><!-- /content -->
+						
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Mapa Evento  -->
 
 <!-- Start of About -->
 	<div data-role="page" id="about2">
 	
 		<div data-role="header" class="header">
 			<h1>About</h1>
-			<a href="#home" data-icon="arrow-l" data-transition="slideup" data-direction="reverse" class="ui-btn-right">Volver</a>
+			<a href="#como-llegar" data-icon="arrow-l" data-transition="slideup" data-direction="reverse" class="ui-btn-right">Volver</a>
 		</div><!-- /header -->	
 	
 		<div data-role="content">
