@@ -189,6 +189,11 @@
 	color: #04826b !important;
 }
 
+.indicaciones p a:visited {
+	color: #686868 !important;
+}
+
+
 .indicaciones img {
 	position: relative;
 	top: 2px;	
@@ -215,7 +220,7 @@
 }
 
 .indicaciones span:hover {
-	background-color: #04826b;
+
 }	
 
 .indicaciones a {
