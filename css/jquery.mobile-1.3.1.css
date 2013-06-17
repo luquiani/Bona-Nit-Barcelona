@@ -3395,7 +3395,7 @@ p {
 	text-decoration:underline;	
 }
 
-#about {
+#about, #about-es, #about-en  {
 	font-size: 10px;
 
 	float: left;
@@ -3419,22 +3419,22 @@ p {
 
 } 
  
-#home {
+#home, #home-es, #home-en {
 	background-color: #ede8df;
 }
 
-#about2 {
+#about2, #about2-en ,#about2-es  {
 	background-color: #a5a4a4;
 } 
 
-#seccion-about p {
+#about p, #about-es p, #about-en p {
 	margin-top: 40px;
 	color: white;
 	line-height: 0px;	
 	text-align: center;
 } 
 
-#seccion-about p a {
+#about p a, #about-es p a, #about-en p a {
 	color: white;
 }
 

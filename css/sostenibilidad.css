@@ -1,15 +1,15 @@
-#sostenibilidad  p {
+#sostenibilidad  p, #sostenibilidad-es  p, #sostenibilidad-en  p {
 	margin-bottom: 25px;		
 }
 
 
-#sostenibilidad h2 {
+#sostenibilidad h2, #sostenibilidad-es h2, #sostenibilidad-en h2 {
 	font-size: 16px;
 	color: #04826b;	
 	text-shadow:none;	
 }
 
-#sostenibilidad h3 {
+#sostenibilidad h3, #sostenibilidad-es h3, #sostenibilidad-en h3 {
 	font-size: 16px;
 	background: transparent url("../images/bullet-sostenibilidad.gif") no-repeat left center;
 	padding-left: 25px;
@@ -18,29 +18,29 @@
 	text-shadow:none;	
 }
 
-#sostenibilidad #recuerda 	{
+#recuerda 	{
 	margin-left: 15px;
 	margin-right: 15px;	
 }
 
 
-#sostenibilidad .amarillo {
+.amarillo {
 	padding-left: 25px;
 	background: transparent url("../images/bullet-sostenibilidad-amarillo.gif") no-repeat left center;		
 }
-#sostenibilidad .azul{
+.azul{
 	padding-left: 25px;
 	background: transparent url("../images/bullet-sostenibilidad-azul.gif") no-repeat left center;		
 }
-#sostenibilidad .girs-medio {
+.girs-medio {
 	padding-left: 25px;
 	background: transparent url("../images/bullet-sostenibilidad-gris.gif") no-repeat left center;		
 }
-#sostenibilidad .marron {
+.marron {
 	padding-left: 25px;
 	background: transparent url("../images/bullet-sostenibilidad-marron.gif") no-repeat left center;		
 }
-#sostenibilidad .verde {
+.verde {
 	padding-left: 25px;
 	background: transparent url("../images/bullet-sostenibilidad-verde.gif") no-repeat left center;		
 }
