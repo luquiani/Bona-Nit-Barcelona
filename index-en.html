@@ -1,0 +1,547 @@
+<!DOCTYPE html> 
+<html> 
+<head> 	
+    <meta charset="UTF-8" />
+	<title>Page Title</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=3">
+    
+	<link rel="stylesheet" href="css/jquery.mobile-1.3.1.css" />
+	<link rel="stylesheet" href="css/home-responsive.css" />
+	<link rel="stylesheet" href="css/lists-responsive.css" />
+	<link rel="stylesheet" href="css/sostenibilidad.css" />		
+	<link rel="stylesheet" href="css/main-responsive.css" />
+	<link rel="stylesheet" href="css/artist-responsive.css" />	
+	<link rel="stylesheet" href="css/main-responsive.css" />				
+		
+	<script src="phonegap.js"></script>	<!-- No tien que estar en /js  folder -->
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.mobile-1.3.1.js"></script>
+		
+</head>
+
+<body>
+
+<!-- Start of Home -->
+	<div data-role="page" id="home-en">
+
+		<div data-role="content">
+
+			<div id="home-menu-container">
+				
+				<div id="menu" >
+					<img id="presenta" src="images/presents.gif"/>
+					<img id="logo" src="images/home-logo-header.gif"/>
+					
+					<div id="table">
+						<div id="cell-1">
+							<a href="#mapa-evento-en"data-transition="slide">
+								<img id="image-icon" src="images/empty.png"/>
+								<div id="text-container">
+									<p id="text-icon">Map</p>
+								</div>
+							</a>
+						</div><!-- End Cell-1 -->							
+						<div id="cell-2">
+							<a href="#horarios-en"data-transition="slide">
+								<img id="image-icon" src="images/empty.png"/>
+								<div id="text-container">
+									<p id="text-icon">Schedules</p>
+								</div>
+							</a>
+						</div><!-- End Cell-2 -->							
+						<div id="cell-3">
+							<a href="#sostenibilidad-en"data-transition="slide">
+								<img id="image-icon" src="images/empty.png"/>
+								<div id="text-container">
+									<p id="text-icon">Sustainability</p>
+								</div>
+							</a>
+						</div><!-- End Cell-3 -->	
+					</div><!-- End Table -->						
+					
+					<div id="table">
+						<div id="cell-4">
+							<a href="#sponsors-en"data-transition="slide">
+								<img id="image-icon" src="images/empty.png"/>
+								<div id="text-container">
+									<p id="text-icon">Sponsors</p>
+								</div>
+							</a>
+						</div><!-- End Cell-1 -->
+						<div id="cell-5">
+							<a href="#como-llegar-en"data-transition="slide">
+								<img id="image-icon" src="images/empty.png"/>
+								<div id="text-container">
+									<p id="text-icon">Directions</p>
+								</div>
+							</a>
+						</div><!-- End Cell-2 -->
+						<div id="cell-6">
+							<a href="#info-en" data-transition="slide">
+								<img id="image-icon" src="images/empty.png"/>
+								<div id="text-container">
+									<p id="text-icon">Concept</p>
+							</div>
+							</a>
+						</div><!-- End Cell-3 -->
+					</div><!-- End Table -->	
+
+				</div><!-- Menu -->	
+		
+			</div><!-- End home-menu-container -->
+			
+		</div><!-- /content -->
+			
+		<div data-role="footer" data-position="fixed" class="footer" data-tap-toggle="false">
+			<a href="#about2-en" data-role="button" data-icon="info" data-transition="slideup">Info</a>
+
+
+			<div data-role="controlgroup" data-type="horizontal" data-mini="true" class="idioma">
+					<a data-role="button"  data-transition="flow" href="index.html">CAT</a>
+					<a data-role="button"  data-transition="flow" href="index-es.html">ESP</a>
+					<!-- <a data-role="button"  data-transition="flow" href="index-en.html">ENG</a>	-->				
+			</div>
+
+			
+			<div id="redes">
+				<ul>
+					<li><a href="https://twitter.com/BonaNitBCN" onclick="window.open(this.href,'_system'); return false;"><img src="images/empty-redes.png"></a></li>	
+					<li><a href="https://www.facebook.com/bonanitbcn" onclick="window.open(this.href,'_system'); return false;"><img src="images/empty-redes.png"></a></li>
+				</ul>
+			</div><!-- End redes -->
+						
+		</div>	
+
+	</div>
+<!-- /End home -->
+
+<!-- Start of About -->
+	<div data-role="page" id="about2-en">
+	
+		<div data-role="header" class="header">
+			<h1>About</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slideup" data-direction="reverse" class="ui-btn-right">Back</a>
+		</div><!-- /header -->	
+	
+		<div data-role="content">
+			<div id="seccion-about">	
+				<p>Powered by Menos que Cero</p>
+				<p><a href="http://www.menosquecero.es" target="_blank">www.menosquecero.es</a></p>
+				<p>Version 1.0</p>							
+			</div><!-- /content -->
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End About -->
+
+<!-- Start of Info -->
+	<div data-role="page" id="info-en">
+	
+		<div data-role="header" class="header">
+			<h1>Concept</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper">		
+
+<p>In Catalan, "Bona Nit" can bear two meanings: it can be used as a greeting, or it can literally mean "good night". The actual definition of this festival is in between both meanings. On the one hand, it is the communication of the proposal we want to share with the world. It is also the phrase that foreign bands are taught when they arrive in Barcelona, which will guarantee a better connection with their audience. Language, music, and culture as a whole are the best ways of forging links between people.</p>
+
+<p>On the other hand, what does a "good night" mean to a music lover? A cohesive artistic proposal, fuelled by an excellent relationship between the bands that promises to offer a once-in-a-lifetime show; an open-air venue at the heart of Montjuïc, touched by the fresh summer breeze; a catering service with varied, organic food to choose from and with vegetarian-friendly options; a healthy and clean environment that does not generate any unnecessary waste; a small-scale venue that will guarantee the show is comfortably enjoyed? </p>
+
+<p>In this inaugural edition, we will host Norway as the guest country: a wonderful example both of a booming cultural industry and of environmental commitment, an awareness also fostered by our festival. And if you cannot live the experience in first person, you will be able to follow us through the open-source streaming service we will provide, so that anyone can broadcast what ´s going on at the festival from their own websites.</p>
+
+<p>Bona Nit Barcelona, have a good night! </p>	
+	
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Info -->
+
+<!-- Start of HOrarios -->
+	<div data-role="page" id="horarios-en">
+	
+		<div data-role="header" class="header">
+			<h1>Schedules</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content">	
+			    
+			<div id="artist-list" class="artist-list clearfix">
+		
+				<div id="item-list" class="clearfix">
+				
+					<div class="separator">@ Poble Espanyol</div>	
+					
+					<div id="item" class="item4">
+					<a href="#inspira-en">
+						<img id="image-artista-list" src="images/inspira.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1"><span>19:00</span> / Inspira</p>
+							</div>
+							</a>
+					</div>
+					
+					<div id="item" class="item5">
+						<a href="#fanfarlo-en">
+							<img id="image-artista-list" src="images/fanfarlo.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1"><span>20:00</span> / Fanfarlo</p>
+							</div>
+						</a>
+					</div>
+
+					<div id="item" class="item3">
+						<a href="#dry-the-river-en"> 
+							<img id="image-artista-list" src="images/dry.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1"><span>21:00</span> / Dry the River</p>
+							</div>
+						</a>
+					</div>
+							
+					<div id="item" class="item1">
+						<a href="#king-of-convenience-en">
+							<img id="image-artista-list" src="images/kings.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1"><span>22:15</span> /  Kings of Convenience</p>
+							</div>
+						</a>
+					</div>
+					
+					<div id="item" class="item2">
+						<a href="#kakkamddafakka-en">  
+							<img id="image-artista-list" src="images/kakk.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1"><span>23:45</span> / Kakkmaddafakka</p>
+							</div>
+						</a>
+					</div>					
+				</div><!-- /End artist-list -->							
+
+				<div id="item-list" class="clearfix">
+				
+				<div class="separator">@ Sala Be Cool</div>
+					<div id="item" class="item4">
+						<a href="#aftershow-en">
+							<img id="image-artista-list" src="images/indiespot.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1">1:30 / Indiespot Djs</p>
+							</div>
+						</a>
+					</div>
+				</div><!-- /End artist-list -->		
+					
+				<div id="item-list" class="clearfix">
+					
+				<div class="separator">@ Sala City Hall</div>
+					<div id="item" class="item5">
+						<a href="#aftershow-en">
+							<img id="image-artista-list" src="images/marci-oz.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1">2:00 / MARCIN ÖZ</p>
+							</div>
+						</a>
+					</div>
+					<div id="item" class="item3">
+						<a href="#aftershow-en">
+							<img id="image-artista-list" src="images/joan-s-luna.jpg" class="image-item" />
+							<div id="text-box" class="clearfix">
+								<p id="text1">4:00 / Joan S. Luna</p>
+							</div>
+						</a>
+					</div>					
+				</div><!-- /End item-list -->	
+		
+			</div><!-- /End artist-list -->				
+				
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Horarios -->
+
+<!-- Start of Como llegar -->
+	<div data-role="page" id="como-llegar-en">
+
+		<div data-role="header" class="header">
+			<h1>Directions</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper">			
+				<div class="indicaciones">		
+				
+						<h2>Poble Espanyol</h2>
+						
+						<p>Av. de Francesc Ferrer i Gu&agrave;rdia, 13</br>08038 Barcelona</p>
+
+							<p><a href="#mapa-pueblo-en" data-transition="slide"><img src="images/como-llegar/google-maps.gif">See map</a></p>
+							
+							<p><img src="images/como-llegar/metro.gif">Metro<img class="metro" src="images/como-llegar/metroL1.gif"><span class="parada">Stop Espanya</span></p>
+							
+							<p><img src="images/como-llegar/metro.gif">Metro<img  class="metro" src="images/como-llegar/metroL3.gif"><span class="parada">Stop Espanya</span></p>
+							
+							<p><img src="images/como-llegar/fc.gif" target="_blank">Ferrocarril Catalans<span class="parada">Stop Espanya</span></p>
+							
+							<p>
+								<img src="images/como-llegar/bus.gif">Auto bus<span class="bus">13</span>
+								<span class="bus" style="margin-left:-5px;">150</span>
+							</p>
+
+			</div><!-- /content -->
+				
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Como llegar -->
+
+<!-- Start of Mapa Como llegar -->
+	<div data-role="page" id="mapa-pueblo-en">
+
+		<div data-role="header" class="header">
+			<h1>Map Directions</h1>
+			<a href="#como-llegar-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Back</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper-map">			
+				<div class="mapa-pueblo">		
+					<img src="images/mapa-high.gif">	
+								
+				</div><!-- /content -->
+						
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Mapa Evento  -->
+
+<!-- Start of Mapa Evento -->
+	<div data-role="page" id="mapa-evento-en">
+
+		<div data-role="header" class="header">
+			<h1>Map</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Back</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper-map">			
+				<div class="mapa-evento">		
+					<img src="images/mapa-evento.jpg">	
+								
+				</div><!-- /content -->
+						
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Mapa Evento  -->
+
+
+
+<!-- Start of Sostenibilidad -->
+	<div data-role="page" id="sostenibilidad-en">
+	
+		<div data-role="header" class="header">
+			<h1>Sustainability</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper">	
+		
+			
+						<h2>Bona Nit Barcelona, an eco-friendly festival</h2>	
+				
+						<p>We want Bona Nit Barcelona to be a sustainable event, and as you are also part of the festival we would like you to help us to achieve it.</p>
+						
+						<h3>Reusable pastic cups</h3>
+						
+						<p>When you enter the venue, you will be given a reusable plastic cup, please keep it until the end of the festival. Therefore you will get both a more clear venue and also a beautiful plastic cup as souvenir.</p>
+						
+						
+						<h3>Waste management: </h3>
+						<p>The venue will have different waste baskets. Please make sure to use the proper one in each case, remember:</p>
+						
+						<h3>Recuerda:</h3>
+						
+						<div id="recuerda">
+							<p><span class="amarillo">YELLOW: </span>plastic packaging, tetra paks and other polycoat cartons, cans.</p>
+							
+							<p><span class="azul">BLUE: </span>paper and cardboard. Please donât throw dirty paper, as napkins or tissues.</p> 
+							
+							<p><span class="girs-medio">GREY: </span>general non-recyclable waste. Napkins, tissues, cigarette butts, sanitary towels, etc.</p>
+							
+							<p><span class="marron">BROWN: </span>organic waste. Leftovers of meat, fish, bread, fruit, vegetables, seafood and nuts, etc.</p>
+							
+							<p><span class="verde">GREEN: </span>glass only. Remember to remove plastic or metal caps, and throw them to the yellow container.</p>
+						</div>
+						
+						<h3>Water</h3>
+						
+						<p>Please make sure to turn off the tap when you're not using water, and help us to avoid water leak by warning the festival organization.</p>
+						
+						<p>Please don't use the toilet as a waste basket.</p>
+						
+						
+						<h3>Transport &  Movility</h3>
+						
+						<p>If you live in Barcelona, you can come with your bike or use Bicing. Another sustainable option is to use public transport.</p>
+						
+						<p>If we pull out all the stops, we will enjoy even more of Bona Nit Barcelona.</p>
+					
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End Sostenibilidad -->
+
+
+<!-- Start of sponsors -->
+	<div data-role="page" id="sponsors-en">
+	
+		<div data-role="header" class="header">
+			<h1>Sponsors</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slide" data-direction="reverse" class="ui-btn-right">Home</a>
+		</div><!-- /header -->
+	
+		<div data-role="content" id="content-warpper">		
+
+			<div id="listado-sponsors-4">
+						<div id="sponsors-4"><h4>Organizes</h4><img src="images/sponsors/1.gif"></div>
+						<div id="sponsors-4"><h4>Sponsors</h4><img src="images/sponsors/2.gif"></div>
+						<div id="sponsors-4"><h4>Official vehicle</h4><img src="images/sponsors/3.gif"></div>
+						<div id="sponsors-4"><h4>Official Hotel</h4><img src="images/sponsors/4.gif"></div>						
+			</div>
+			
+
+	
+			<div id="listado-sponsors-2">
+				<h4>Partners</h4>
+						<div id="sponsors-2"><img src="images/sponsors/5.gif"></div>
+						<div id="sponsors-2"><img src="images/sponsors/6.gif"></div>					
+			</div>	
+			<div style="clear: both;"> </div>
+					<div id="listado-sponsors-4">
+						<h4>Media partners</h4>
+						<div id="sponsors-4"><img src="images/sponsors/7.gif"></div>
+						<div id="sponsors-4"><img src="images/sponsors/8.gif"></div>	
+						<div id="sponsors-4"><img src="images/sponsors/9.gif"></div>
+						<div id="sponsors-4"><img src="images/sponsors/10.gif"></div>							
+										
+			</div>		
+	
+			
+			<div id="listado-sponsors-3">
+				<h4>With the support of</h4>
+						<div id="sponsors-3"><img src="images/sponsors/11.gif"></div>
+						<div id="sponsors-3"><img src="images/sponsors/12.gif"></div>
+						<div id="sponsors-3-ulitmo"><img src="images/sponsors/13.gif"></div>						
+			</div>		
+					
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End sponsors -->
+
+
+<!- ------------------------------------------------------------------------------------------------------------- -->   
+<!- -------------------------------------------------- BANDA FICHAS --------------------------------------------- -->   
+<!- ------------------------------------------------------------------------------------------------------------- -->   
+
+<!-- BANDA KINGS-->                
+		<div data-role="page" id="king-of-convenience-en">
+			<div data-role="content">
+				<div data-role="header" class="header">
+					<h1>King of Convenience</h1>
+					<a data-icon="arrow-l" class="ui-btn-right" data-rel="back">Schedules</a>
+				</div><!-- /header -->
+			
+			<div class="ficha-artista">
+				<p><div class="image"><img src="images/kings.jpg"></div>It is difficult to describe what Eirik Glambek and Erlend Øye: can achieve on a live show with only a couple of guitars and the subtlety of their voices, which can recreate cold winter landscapes and, a minute later, can set the audience on fire with songs like <em>I´d rather dance with you</em> or <em>Misread</em>. If you had the chance to see them live at the Palau de la MÃºsica in 2009, or at the Poble Espanyol the following year, you already know this: the Bergen guys are infallible from up close.</p>	
+				
+				</div>	
+			</div>	
+		</div>
+<!-- /End Kings -->	
+
+<!-- /BANDA KAKKA -->                
+		<div data-role="page" id="kakkamddafakka-en">
+			<div data-role="content">
+				<div data-role="header" class="header">
+					<h1>Kakkamaddaffaka</h1>
+					<a data-icon="arrow-l" class="ui-btn-right" data-rel="back">Schedules</a>
+				</div><!-- /header -->
+			
+			<div class="ficha-artista">
+				<p><div class="image"><img src="images/kakk.jpg"></div>
+				Their first visit to Barcelona in October 2011, in their album <em>Hest</em> tour, beat out every forecast and nearly packed-out the Music Hall, in a show that will be long remembered. Since then, the Norwegians have played at the most important scenes, and their participation in Spanish summer 2012 festivals was an absolute success. Now, KAKKMAFFADAKKA are coming back to Barcelona to present their new album, <em>6 months is a long time</em>, produced once again by Erlend Øye. Their comeback to town promises a breathtaking experience.</p>	
+				
+				</div>	
+			</div>	
+		</div>
+<!-- /End KAKKA -->	
+
+<!-- /BANDA DRY THE RIVER -->                
+		<div data-role="page" id="dry-the-river-en">
+			<div data-role="content">
+				<div data-role="header" class="header">
+					<h1>Dry The River</h1>
+					<a data-icon="arrow-l" class="ui-btn-right" data-rel="back">Schedules</a>
+				</div><!-- /header -->
+			
+			<div class="ficha-artista">
+				<p><div class="image"><img src="images/dry.jpg"></div>Christened as "the new Mumford & Sons" by the British media, and chosen Sound of 2012 by the BBC, the band led by Peter Liddle has not let success go to their heads. They have spent 2 years touring around the world and refining, day after day, their intricate harmonic vocals, strengthening the forcefulness of their sound and perfecting a setup that is second to none. Take a second to imagine Fleet Foxes? coral colourfulness, mixed with Band of Horses? power, and sprinkled with the epic folk of <em>Little Lion Man</em> authors, all in one single band. If you still cannot picture all this, don?t miss out their show at Bona Nit Barcelona.</p>	
+				
+				</div>	
+			</div>	
+		</div>
+<!-- /End DRY THE RIVER -->	
+
+<!-- /BANDA FANFARLO -->                
+		<div data-role="page" id="fanfarlo-en">
+			<div data-role="content">
+				<div data-role="header" class="header">
+					<h1>Fanfarlo</h1>
+					<a data-icon="arrow-l" class="ui-btn-right" data-rel="back">Schedules</a>
+				</div><!-- /header -->
+			
+			<div class="ficha-artista">
+				<p><div class="image"><img src="images/fanfarlo.jpg"></div>The band led by Swedish Simon Balthazar showed much more than promise in their debut album, <em>Reservoir</em>. Singles such as <em>The Walls Are Coming Down</em> or <em>I´m a Pilot</em> opened the door to international acknowledgement, although their success did not reach our country until their second album was released, <em>Rooms filled with light</em>, a more experimental work where the band flirts with electronica, while keeping their exquisite string and wind arrangements. Their show at Bona Nit Barcelona will be the first opportunity for Barcelona to listen to the songs which will make up their third album, currently being recorded.</p>	
+				
+				</div>	
+			</div>	
+		</div>
+<!-- /End FANFARLO -->	
+
+<!-- /BANDA INSPIRA -->                
+		<div data-role="page" id="inspira-en">
+			<div data-role="content">
+				<div data-role="header" class="header">
+					<h1>Inspira</h1>
+					<a data-icon="arrow-l" class="ui-btn-right" data-rel="back">Schedules</a>
+				</div><!-- /header -->
+			
+			<div class="ficha-artista">
+				<p><div class="image"><img src="images/inspira.jpg"></div>Very few bands are capable of capturing Nick Drake´s deepness, Bon Iver´s elegance and Iron & Wine ´s refinement to forge an upright, vital and honest discourse, such as frontman Jordi Lanuza and his excellent band are an example of. And what´s more: in their own language, Catalan, which helps to emphasize the sonority of their musical structures that, despite their complexity, take hold of you forever from the very first time you listen to them. After making themselves known with <em>Cova Placenta</em> and securing their place in the music scene with the wonderful <em>Escapistes</em>, Inspira will play at Bona Nit Barcelona to present their new album, that will be released in the upcoming months, titled <em>Amunt!</em>. We could not imagine a better way of starting our festival.</p>	
+				
+				</div>	
+			</div>	
+		</div>
+<!-- /End INSPIRA -->
+
+<!-- /BANDA AFTERSHOW -->                
+		<div data-role="page" id="aftershow-en">
+			<div data-role="content">
+				<div data-role="header" class="header">
+					<h1>Aftershow</h1>
+					<a data-icon="arrow-l" class="ui-btn-right" data-rel="back">Schedules</a>
+				</div><!-- /header -->
+			
+			<div class="ficha-artista">
+				<p><div class="image"><img src="images/aftershow.jpg"></div>For those who wish to keep the night going and enjoying music, we have prepared a programme that will be held in two local venues:</p>
+
+<p><strong>BeCool:</strong> Our collaborator <strong>Indiespot DJs</strong> will fire his well-known and inerrant selection of hits, picking the freshest produce from the international scene.</p>
+
+<p><strong>City Hall:</strong> Double bill formed by <strong>Marcin Öz</strong>, bass player at The Whitest Boy Alive and co-producer of KAKKMADDAFAKKA in his most danceable side, together with <strong>Joan S. Luna</strong>: one of the key personalities to understanding Barcelona's music scene..</p>			
+				</div>	
+			</div>	
+		</div>
+<!-- /End INSPIRA -->
+
+</body>
+</html>
