@@ -178,6 +178,7 @@
 
 .indicaciones {
 	position: relative;
+	text-align: left;
 }
 
 .indicaciones p a {
