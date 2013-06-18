@@ -3427,14 +3427,14 @@ p {
 	background-color: #a5a4a4;
 } 
 
-#about p, #about-es p, #about-en p {
+#about2 p, #about2-es p, #about2-en p {
 	margin-top: 40px;
 	color: white;
 	line-height: 0px;	
 	text-align: center;
 } 
 
-#about p a, #about-es p a, #about-en p a {
+#about2 p a, #about2-es p a, #about2-en p a {
 	color: white;
 }
 
