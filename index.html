@@ -14,66 +14,19 @@
 	<link rel="stylesheet" href="css/artist-responsive.css" />	
 	<link rel="stylesheet" href="css/main-responsive.css" />				
 		
-    <script src="cordova.js"></script>
-    <script src="phonegap.js"></script>	<!-- No tien que estar en /js  folder -->
+	<script src="phonegap.js"></script>	<!-- No tien que estar en /js  folder -->
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/jquery.mobile-1.3.1.js"></script>
-	
-	<script src="js/social.js"></script>
-	<script>
-	function startUp() {
-	 	
-	    var canvas = document.getElementById('myCanvas');
-	    var context = canvas.getContext('2d');
-        var imageTag = document.getElementById('myImage');
-        
-        watermark = new Image();
-	    watermark.src = "images/marco-ref.png";
-	    
-		$("#takePhotoCAT, #takePhotoESP, #takePhotoENG").on("touchstart", function(e) {
-			navigator.camera.getPicture(camSuccess, camError, {quality: 50, targetWidth: 500, targetHeight: 500, destinationType: Camera.DestinationType.FILE_URI});
-		});	
-	 
-		function camError(e) {
-			console.log("Camera Error");
-			console.log(JSON.stringify(e));
-		}
-	  
-		function camSuccess(imageURI) {
-			console.log("Camera Success");
-            
-            var imageObj = new Image();
-	        imageObj.src = imageURI;
-            
-	        imageObj.onload = function(e) {
-                
-                var imgWidth = canvas.width;
-                var imgHeight = canvas.height;
-                                    
-	            context.drawImage(imageObj, 0, 0, 500, 500);
-                context.drawImage(watermark, 0, 0, 500, 500);
-                
-                var data = canvas.toDataURL("image/png").replace("data:image/png;base64,", "");
-                
-                imageTag.src = data;
-                
-                window.plugins.social.available(function(avail) {
-                    if (avail) {
-                        console.log('Avail');
-                        // Show social widgets
-                        window.plugins.social.share('#bonanit', '', data);
-                    } else {
-                        // Social not supported
-                        console.log('NOT Avail');
-                    }
-                });
-	        }
-		}
-	}
-    </script>
+
 </head>
 
 <body>
+
+
+
+
+
+
 
 <!-- Start of Home -->
 	<div data-role="page" id="home">
@@ -130,10 +83,10 @@
 							</a>
 						</div><!-- End Cell-2 -->
 						<div id="cell-6">
-							<a href="" id="takePhotoCAT">
+							<a href="#info"data-transition="slide">
 								<img id="image-icon" src="images/empty.png"/>
 								<div id="text-container">
-									<p id="text-icon">Camara</p>
+									<p id="text-icon">Concepte</p>
 							</div>
 							</a>
 						</div><!-- End Cell-3 -->
@@ -146,7 +99,7 @@
 		</div><!-- /content -->
 
 		<div data-role="footer" data-position="fixed" class="footer-look" data-tap-toggle="false">				
-			<a href="#info" data-role="button" data-icon="info" data-transition="slide">Info</a>
+			<a href="#about2" data-role="button" data-icon="info" data-transition="slideup">Info</a>
 
 
 			<div data-role="controlgroup" data-type="horizontal" data-mini="true" class="idioma">
@@ -222,11 +175,11 @@
 								</div>
 							</a>
 						</div><!-- End Cell-2 -->
-						<div id="cell-6">
-							<a href="" id="takePhotoESP">
+					<div id="cell-6">
+							<a href="#info-es" data-transition="slide">
 								<img id="image-icon" src="images/empty.png"/>
 								<div id="text-container">
-									<p id="text-icon">Camara</p>
+									<p id="text-icon">Concepto</p>
 							</div>
 							</a>
 						</div><!-- End Cell-3 -->
@@ -239,7 +192,7 @@
 		</div><!-- /content -->
 			
 		<div data-role="footer" data-position="fixed" class="footer-look" data-tap-toggle="false">
-			<a href="#info-es" data-role="button" data-icon="info" data-transition="slide">Info</a>
+			<a href="#about2-es" data-role="button" data-icon="info" data-transition="slideup">Info</a>
 
 
 			<div data-role="controlgroup" data-type="horizontal" data-mini="true" class="idioma">
@@ -316,10 +269,10 @@
 							</a>
 						</div><!-- End Cell-2 -->
 						<div id="cell-6">
-							<a href="" id="takePhotoENG">
+							<a href="#info-en" data-transition="slide">
 								<img id="image-icon" src="images/empty.png"/>
 								<div id="text-container">
-									<p id="text-icon">Camera</p>
+									<p id="text-icon">Concept</p>
 							</div>
 							</a>
 						</div><!-- End Cell-3 -->
@@ -332,7 +285,7 @@
 		</div><!-- /content -->
 			
 		<div data-role="footer" data-position="fixed"  data-tap-toggle="false" class="footer-look">
-				<a href="#info-en" data-role="button" data-icon="info" data-transition="slide">Info</a>
+			<a href="#about2-en" data-role="button" data-icon="info" data-transition="slideup">Info</a>
 	
 				<div data-role="controlgroup" data-type="horizontal" data-mini="true" class="idioma">
 						<a data-role="button"  data-transition="flow" href="#home">CAT</a>
@@ -352,60 +305,63 @@
 	</div>
 <!-- /End home -->
 
+
 <!-- Start of About -->
-	<div data-role="page" id="camara">
+	<div data-role="page" id="about2">
 	
 		<div data-role="header" class="header">
-			<h1>Camara</h1>
-			<a href="#home" data-icon="arrow-l" data-transition="fade" class="ui-btn-right">Tornar</a>
+			<h1>Info</h1>
+			<a href="#home" data-icon="arrow-l" data-transition="slideup" data-direction="reverse" class="ui-btn-right">Tornar</a>
 		</div><!-- /header -->	
 	
 		<div data-role="content">
-		</div><!-- /content -->
-		
-	</div>
-<!-- /End About -->
-
-<!-- Start of About -->
-	<div data-role="page" id="camara-es">
-	
-		<div data-role="header" class="header">
-			<h1>Camara</h1>
-			<a href="#home-es" data-icon="arrow-l" data-transition="fade" class="ui-btn-right">Volver</a>
-		</div><!-- /header -->	
-	
-			<div data-role="content">
+			<div id="seccion-about">	
+				<p>Desenvolupat per Menos que Cero</p>
+				<p><a href="https://www.menosquecero.es" onclick="window.open(this.href,'_system'); return false;">www.menosquecero.es</a></p>
+				<p>Version 1.02</p>							
 			</div><!-- /content -->
-		
 		</div><!-- /content -->
 		
 	</div>
 <!-- /End About -->
 
 <!-- Start of About -->
-	<div data-role="page" id="camara-en">
+	<div data-role="page" id="about2-es">
 	
 		<div data-role="header" class="header">
-			<h1>Camera</h1>
-			<a href="#home-en" data-icon="arrow-l" data-transition="fade" class="ui-btn-right">Back</a>
+			<h1>Info</h1>
+			<a href="#home-es" data-icon="arrow-l" data-transition="slideup" data-direction="reverse" class="ui-btn-right">Volver</a>
 		</div><!-- /header -->	
 	
 		<div data-role="content">
-            <canvas id="myCanvas" width="500" height="500" style="display:none;"></canvas>
-            <img id="myImage" style="display:none;" />
-			<script type="text/javascript">
-				document.addEventListener("deviceready", startUp, false);
-                </script>
+			<div id="seccion-about">	
+				<p>Desarrollado por Menos que Cero</p>
+				<p><a href="https://www.menosquecero.es" onclick="window.open(this.href,'_system'); return false;">www.menosquecero.es</a></p>
+				<p>Version 1.02</p>							
+			</div><!-- /content -->
 		</div><!-- /content -->
 		
 	</div>
 <!-- /End About -->
 
-
-
-
-
-
+<!-- Start of About -->
+	<div data-role="page" id="about2-en">
+	
+		<div data-role="header" class="header">
+			<h1>Info</h1>
+			<a href="#home-en" data-icon="arrow-l" data-transition="slideup" data-direction="reverse" class="ui-btn-right">Back</a>
+		</div><!-- /header -->	
+	
+		<div data-role="content">
+			<div id="seccion-about">	
+				<p>Powered by Menos que Cero</p>
+				<p><a href="https://www.menosquecero.es" onclick="window.open(this.href,'_system'); return false;">www.menosquecero.es</a></p>
+				<p>Version 1.02</p>							
+			</div><!-- /content -->
+		</div><!-- /content -->
+		
+	</div>
+<!-- /End About -->
 
 
 
@@ -423,7 +379,7 @@
 	
 		<div data-role="content" id="content-warpper">			
 				<div class="mapa-evento">		
-					<img src="images/mapa-evento.jpg">					
+					<img src="images/mapa-evento.gif">					
 				</div><!-- /content -->
 		</div><!-- /content -->
 		
@@ -440,7 +396,7 @@
 	
 		<div data-role="content" id="content-warpper">			
 				<div class="mapa-evento">		
-					<img src="images/mapa-evento-es.jpg">					
+					<img src="images/mapa-evento-es.gif">					
 				</div><!-- /content -->
 		</div><!-- /content -->
 		
@@ -457,7 +413,7 @@
 	
 			<div data-role="content" id="content-warpper">			
 				<div class="mapa-evento">		
-					<img src="images/mapa-evento-en.jpg">					
+					<img src="images/mapa-evento-en.gif">					
 				</div><!-- /content -->
 		</div><!-- /content -->
 		
@@ -482,20 +438,13 @@
 	
 		<div data-role="content" id="content-warpper">		
 
-<p>En català, Bona Nit pot tenir dos significats: o bé una salutació, o literalment desitjar una bona nit. En realitat el sentit d`aquest festival es troba just en l`encaix entre ambdós significats. Per una banda, és la presentació al món d`aquesta proposta, a més de la frase que se li ensenya a un músic estranger quan arriba a Barcelona per tal de connectar millor amb el públic. La llengua, la música i la cultura en general són la millor manera de crear vincles entre persones.</p>
+<p>En català, Bona Nit pot tenir dos significats: o bé una salutació, o literalment desitjar una bona nit. En realitat el sentit d'aquest festival es troba just en l'encaix entre ambdós significats. Per una banda, és la presentació al món d'aquesta proposta, a més de la frase que se li ensenya a un músic estranger quan arriba a Barcelona per tal de connectar millor amb el públic. La llengua, la música i la cultura en general són la millor manera de crear vincles entre persones.</p>
 
-<p>Per altra banda, què és una "bona nit" per un amant de la música? Gaudir d`una proposta artística cohesionada, on la bona relació entre els grups faci preveure un show irrepetible; en un recinte al aire lliure en plena muntanya de Montjuïc tocat amb la brisa estiuenca; amb un servei de restauració que ofereixi menjar variat, biològic i amb opcions vegetarianes perquè tot el món tingui on triar; en un entorn sa i net que no generi residus innecessaris; amb un aforament reduït que permeti gaudir amb comoditat de l`espectacle... Doncs tot això i molt més és el que hem tingut en compte a l`hora de plantejar aquest nou festival que tindrà lloc el 20 de juliol al Poble Espanyol de Barcelona.</p>
+<p>Per altra banda, què és una "bona nit" per un amant de la música? Gaudir d'una proposta artística cohesionada, on la bona relació entre els grups faci preveure un show irrepetible; en un recinte al aire lliure en plena muntanya de Montjuïc tocat amb la brisa estiuenca; amb un servei de restauració que ofereixi menjar variat, biològic i amb opcions vegetarianes perquè tot el món tingui on triar; en un entorn sa i net que no generi residus innecessaris; amb un aforament reduït que permeti gaudir amb comoditat de l'espectacle... Doncs tot això i molt més és el que hem tingut en compte a l'hora de plantejar aquest nou festival que tindrà lloc el 20 de juliol al Poble Espanyol de Barcelona.</p>
 
 <p>En aquesta edició inaugural, comptarem amb Noruega com a país convidat, tot un exemple a seguir tant pel potencial de la seva indústria cultural com pel compromís amb el medi ambient, un tema amb el que el nostre festival està molt conscienciat. I si no podeu venir per viure-ho en persona, esperem que com a mínim ens seguiu a través del streaming de codi obert que oferim perquè qualsevol pugui retransmetre el que passa al festival des de la seva pàgina web.</p>
 
 <p>Bona Nit Barcelona, que passeu una bona nit. </p>	
-	
-	
-			<div id="seccion-about">	
-				<p>Desenvolupat per Menos que Cero</p>
-				<p><a href="https://www.menosquecero.es" onclick="window.open(this.href,'_system'); return false;">www.menosquecero.es</a></p>
-				<p>Version 1.1</p>							
-			</div>
 
 		</div><!-- /content -->
 		
@@ -519,12 +468,6 @@
 <p>En esta edición inaugural contaremos con Noruega como país invitado, todo un ejemplo a seguir tanto por el potencial de su industria cultural como por su compromiso con el medio ambiente, un tema con el que nuestro festival está muy concienciado. Y si no podéis venir para vivirlo en persona, esperamos que por lo menos nos sigáis desde el streaming de código abierto que ofreceremos para que cualquiera pueda retransmitir lo que ocurre en el festival desde su propia web.</p>
 
 <p>Bona Nit Barcelona, que paséis una buena noche.</p>
-
-			<div id="seccion-about">	
-				<p>Desenvolupat per Menos que Cero</p>
-				<p><a href="https://www.menosquecero.es" onclick="window.open(this.href,'_system'); return false;">www.menosquecero.es</a></p>
-				<p>Version 1.0</p>							
-			</div><!-- /content -->
 			
 		</div><!-- /content -->
 		
@@ -545,15 +488,10 @@
 
 <p>On the other hand, what does a "good night" mean to a music lover? A cohesive artistic proposal, fuelled by an excellent relationship between the bands that promises to offer a once-in-a-lifetime show; an open-air venue at the heart of Montjuïc, touched by the fresh summer breeze; a catering service with varied, organic food to choose from and with vegetarian-friendly options; a healthy and clean environment that does not generate any unnecessary waste; a small-scale venue that will guarantee the show is comfortably enjoyed? </p>
 
-<p>In this inaugural edition, we will host Norway as the guest country: a wonderful example both of a booming cultural industry and of environmental commitment, an awareness also fostered by our festival. And if you cannot live the experience in first person, you will be able to follow us through the open-source streaming service we will provide, so that anyone can broadcast what`s going on at the festival from their own websites.</p>
+<p>In this inaugural edition, we will host Norway as the guest country: a wonderful example both of a booming cultural industry and of environmental commitment, an awareness also fostered by our festival. And if you cannot live the experience in first person, you will be able to follow us through the open-source streaming service we will provide, so that anyone can broadcast what's going on at the festival from their own websites.</p>
 
 <p>Bona Nit Barcelona, have a good night! </p>	
 
-			<div id="seccion-about">	
-				<p>Desarrollado por Menos que Cero</p>
-				<p><a href="https://www.menosquecero.es" onclick="window.open(this.href,'_system'); return false;">www.menosquecero.es</a></p>
-				<p>Version 1.0</p>	
-			</div>
 	
 		</div><!-- /content -->
 		
@@ -1000,7 +938,7 @@
 						
 						<h3>Transporte y  Movilidad</h3>
 						
-						<p>Si vives en Barcelona, ven con tu bici o utiliza Bicing. Otra opción sostenible es utilizar el transporte metropolitano. </p>
+						<p>Si vives en Barcelona, ven con tu bici o utiliza Bicing. Otra opción sostenible es utilizar el transporte pú. </p>
 						
 						<div class="indicaciones">		
 						
@@ -1051,12 +989,12 @@
 				
 						<p>We want Bona Nit Barcelona to be a sustainable event, and as you are also part of the festival we would like you to help us to achieve it.</p>
 						
-						<h3>Reusable pastic cups</h3>
+						<h3>Reusable plastic cups</h3>
 						
 						<p>When you enter the venue, you will be given a reusable plastic cup, please keep it until the end of the festival. Therefore you will get both a more clear venue and also a beautiful plastic cup as souvenir.</p>
 						
 						
-						<h3>Waste management: </h3>
+						<h3>Waste management</h3>
 						<p>The venue will have different waste baskets. Please make sure to use the proper one in each case, remember:</p>
 						
 						<div id="recuerda">
@@ -1114,11 +1052,6 @@
 
 
 
-
-
-
-
-
 <!-- Start of sponsors -->
 	<div data-role="page" id="sponsors">
 	
@@ -1135,36 +1068,39 @@
 						<div id="sponsors-4"><h4>Vehicle oficial</h4><img src="images/sponsors/3.gif"></div>
 						<div id="sponsors-4"><h4>Hotel oficial</h4><img src="images/sponsors/4.gif"></div>						
 			</div>
-			
-
-	
-			<div id="listado-sponsors-2">
+			</br>
+			<div style="clear: both;"> </div>
+			<div id="listado-sponsors-4">
 				<h4>Col·laboradors</h4>
-						<div id="sponsors-2"><img src="images/sponsors/5.gif"></div>
-						<div id="sponsors-2"><img src="images/sponsors/6.gif"></div>					
+						<div id="sponsors-4"><img src="images/sponsors/5.gif"></div>
+						<div id="sponsors-4"><img src="images/sponsors/6.gif"></div>
+						<div id="sponsors-4"><img src="images/sponsors/6-1.gif"></div>
+						<div id="sponsors-4"><img src="images/sponsors/6-2.gif"></div>
+						<div id="sponsors-4"><img src="images/sponsors/6-3.gif"></div>													
 			</div>	
 			<div style="clear: both;"> </div>
-					<div id="listado-sponsors-4">
-						<h4>Mitjans oficials</h4>
+			<div id="listado-sponsors-4">
+					<h4>Mitjans oficials</h4>
 						<div id="sponsors-4"><img src="images/sponsors/7.gif"></div>
 						<div id="sponsors-4"><img src="images/sponsors/8.gif"></div>	
 						<div id="sponsors-4"><img src="images/sponsors/9.gif"></div>
 						<div id="sponsors-4"><img src="images/sponsors/10.gif"></div>							
 										
 			</div>		
-	
-			
+			</br>
+			<div style="clear: both;"> </div>
 			<div id="listado-sponsors-3">
 				<h4>Amb el suport de</h4>
 						<div id="sponsors-3"><img src="images/sponsors/11.gif"></div>
 						<div id="sponsors-3"><img src="images/sponsors/12.gif"></div>
-						<div id="sponsors-3-ulitmo"><img src="images/sponsors/13.gif"></div>						
+						<div id="sponsors-3"><img src="images/sponsors/13.gif"></div>						
 			</div>		
 					
 		</div><!-- /content -->
 		
 	</div>
 <!-- /End sponsors -->
+
 
 <!-- Start of sponsors -->
 	<div data-role="page" id="sponsors-es">
@@ -1450,7 +1386,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/kings.jpg"></div>És difícil descriure del que són capaços en directe Eirik Glambek i Erlend Øye: amb només dues guitarres i la subtilesa de dues veus aconsegueixen recrear freds passatges invernals, i instants després encendre al públic amb cançons com <em>I`d rather dance with you</em> o <em>Misread</em>. Qui els veiés als seus concerts del Palau de la Música al 2009 o al mateix Poble Espanyol l`any després, ja ho sabrà: els de Bergen són infal·libles en les distàncies curtes.</p>	
+				<p><div class="image"><img src="images/kings.jpg"></div>És difícil descriure del que són capaços en directe Eirik Glambek i Erlend Øye: amb només dues guitarres i la subtilesa de dues veus aconsegueixen recrear freds passatges invernals, i instants després encendre al públic amb cançons com <em>I'd rather dance with you</em> o <em>Misread</em>. Qui els veiés als seus concerts del Palau de la Música al 2009 o al mateix Poble Espanyol l'any després, ja ho sabrà: els de Bergen són infal·libles en les distàncies curtes.</p>	
 				
 				</div>	
 			</div>	
@@ -1466,7 +1402,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/kakk.jpg"></div>La seva primera visita a Barcelona l`octubre de 2011 per presentar el seu aclamat <em>Hest</em> va fer saltar pels aires qualsevol pronòstic i, fregant el sold out a la sala Music Hall, va ser un concert que els presents recordaran durant molt temps. Des de llavors, els noruecs han agafat experiència en els grans escenaris, i el seu pas pels festivals espanyols s'ha convertit en un veritable vendaval. Ara KAKKMAFFADAKKA tornen a Barcelona per a presentar el seu nou disc <em>Six months is a long time</em>, produït un cop més per Erlend Øye (Kings of Convenience), i el seu retorn a la ciutat promet emocions fortes.</p>	
+				<p><div class="image"><img src="images/kakk.jpg"></div>La seva primera visita a Barcelona l'octubre de 2011 per presentar el seu aclamat <em>Hest</em> va fer saltar pels aires qualsevol pronòstic i, fregant el sold out a la sala Music Hall, va ser un concert que els presents recordaran durant molt temps. Des de llavors, els noruecs han agafat experiència en els grans escenaris, i el seu pas pels festivals espanyols s'ha convertit en un veritable vendaval. Ara KAKKMAFFADAKKA tornen a Barcelona per a presentar el seu nou disc <em>Six months is a long time</em>, produït un cop més per Erlend Øye (Kings of Convenience), i el seu retorn a la ciutat promet emocions fortes.</p>	
 				
 				</div>	
 			</div>	
@@ -1483,7 +1419,7 @@
 			
 			<div class="ficha-artista">
 				<p><div class="image"><img src="images/dry.jpg"></div>
-				Batejats com "els nous Mumford & Sons" per la premsa britànica, i escollits com a Sound of 2012 per la BBC, al grup que lidera Peter Liddle no els ha pujat la fama al cap. I per això han dedicat 2 anys a girar per tot el món llimant dia rere dia la seva intricada harmonia vocal, musculant la contundència del seu so, i perfeccionant una posada en escena a l`alçada de molt pocs grups. Imagina per un moment el colorit coral de Fleet Foxes barrejat amb la potència de Band of Horses i esquitxat per l`èpica folk dels autors de <em>Little Lion Man</em>, tot això en un mateix grup. Si no aconsegueixes imaginar-ho, no et perdis el seu concert al Bona Nit Barcelona.</p>	
+				Batejats com "els nous Mumford & Sons" per la premsa britànica, i escollits com a Sound of 2012 per la BBC, al grup que lidera Peter Liddle no els ha pujat la fama al cap. I per això han dedicat 2 anys a girar per tot el món llimant dia rere dia la seva intricada harmonia vocal, musculant la contundència del seu so, i perfeccionant una posada en escena a l'alçada de molt pocs grups. Imagina per un moment el colorit coral de Fleet Foxes barrejat amb la potència de Band of Horses i esquitxat per l'èpica folk dels autors de <em>Little Lion Man</em>, tot això en un mateix grup. Si no aconsegueixes imaginar-ho, no et perdis el seu concert al Bona Nit Barcelona.</p>	
 				
 				</div>	
 			</div>	
@@ -1499,7 +1435,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/fanfarlo.jpg"></div>El grup liderat pel suec Simon Balthazar va fer molt més que apuntar maneres amb el seu debut <em>Reservoir</em>. Singles com <em>The Walls Are Coming Down</em> o <em>I`m a Pilot</em> els van obrir la porta al reconeixement internacional, tot i que curiosament el seu èxit al nostre paós no es va consolidar fins l`arribada del seu segon llarga durada, <em>Rooms filled with light</em>, un segon disc més experimental en el que el grup coqueteja tímidament amb l`electrònica sense renunciar als seus exquisits acords de corda i vent. El seu concert al Bona Nit Barcelona serà la primera ocasió d`escoltar en directe a Barcelona les cançons que donaran forma al seu tercer disc, actualment en procés de gravació.</p>	
+				<p><div class="image"><img src="images/fanfarlo.jpg"></div>El grup liderat pel suec Simon Balthazar va fer molt més que apuntar maneres amb el seu debut <em>Reservoir</em>. Singles com <em>The Walls Are Coming Down</em> o <em>I'm a Pilot</em> els van obrir la porta al reconeixement internacional, tot i que curiosament el seu èxit al nostre paós no es va consolidar fins l'arribada del seu segon llarga durada, <em>Rooms filled with light</em>, un segon disc més experimental en el que el grup coqueteja tímidament amb l'electrònica sense renunciar als seus exquisits acords de corda i vent. El seu concert al Bona Nit Barcelona serà la primera ocasió d'escoltar en directe a Barcelona les cançons que donaran forma al seu tercer disc, actualment en procés de gravació.</p>	
 				
 				</div>	
 			</div>	
@@ -1557,7 +1493,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/kings.jpg"></div>Es difícil describir lo que son capaces de hacer en directo Eirik Glambek y Erlend Øye. Con tan solo un par de guitarras y la sutileza de sus voces, este dúo logra recrear fríos paisajes invernales y al momento siguiente encender al público por combustión instantánea con canciones como <em>I`d rather dance with you</em> o <em>Misread</em>. Quién los vio en sus conciertos del Palau de la Música en 2009 o en el mismo Poble Espanyol el año siguiente, lo sabe: los de Bergen son infalibles en las distancias cortas.</p>	
+				<p><div class="image"><img src="images/kings.jpg"></div>Es difícil describir lo que son capaces de hacer en directo Eirik Glambek y Erlend Øye. Con tan solo un par de guitarras y la sutileza de sus voces, este dúo logra recrear fríos paisajes invernales y al momento siguiente encender al público por combustión instantánea con canciones como <em>I'd rather dance with you</em> o <em>Misread</em>. Quién los vio en sus conciertos del Palau de la Música en 2009 o en el mismo Poble Espanyol el año siguiente, lo sabe: los de Bergen son infalibles en las distancias cortas.</p>	
 				
 				</div>	
 			</div>	
@@ -1605,7 +1541,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/fanfarlo.jpg"></div>La banda liderada por el sueco Simon Balthazar hizo mucho más que apuntar maneras en su álbum debut <em>Reservoir</em>. Singles como <em>The Walls Are Coming Down</em> o <em>I`m a Pilot</em> les abrieron la puerta al reconocimiento internacional, aunque curiosamente en nuestro país su éxito no se consolidaría hasta la llegada de su segundo LP, <em>Rooms filled with light</em>, un segundo trabajo más experimental en el que la banda coquetea tímidamente con la electrónica sin renunciar a sus exquisitos arreglos de cuerda y viento. Su concierto en el Bona Nit Barcelona será la primera ocasión de escuchar en directo en Barcelona los temas que darán forma a su tercer disco, actualmente en proceso de grabación.</p>	
+				<p><div class="image"><img src="images/fanfarlo.jpg"></div>La banda liderada por el sueco Simon Balthazar hizo mucho más que apuntar maneras en su álbum debut <em>Reservoir</em>. Singles como <em>The Walls Are Coming Down</em> o <em>I'm a Pilot</em> les abrieron la puerta al reconocimiento internacional, aunque curiosamente en nuestro país su éxito no se consolidaría hasta la llegada de su segundo LP, <em>Rooms filled with light</em>, un segundo trabajo más experimental en el que la banda coquetea tímidamente con la electrónica sin renunciar a sus exquisitos arreglos de cuerda y viento. Su concierto en el Bona Nit Barcelona será la primera ocasión de escuchar en directo en Barcelona los temas que darán forma a su tercer disco, actualmente en proceso de grabación.</p>	
 				
 				</div>	
 			</div>	
@@ -1663,7 +1599,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/kings.jpg"></div>It is difficult to describe what Eirik Glambek and Erlend Øye: can achieve on a live show with only a couple of guitars and the subtlety of their voices, which can recreate cold winter landscapes and, a minute later, can set the audience on fire with songs like <em>I`d rather dance with you</em> or <em>Misread</em>. If you had the chance to see them live at the Palau de la MÃºsica in 2009, or at the Poble Espanyol the following year, you already know this: the Bergen guys are infallible from up close.</p>	
+				<p><div class="image"><img src="images/kings.jpg"></div>It is difficult to describe what Eirik Glambek and Erlend Øye: can achieve on a live show with only a couple of guitars and the subtlety of their voices, which can recreate cold winter landscapes and, a minute later, can set the audience on fire with songs like <em>I'd rather dance with you</em> or <em>Misread</em>. If you had the chance to see them live at the Palau de la MÃºsica in 2009, or at the Poble Espanyol the following year, you already know this: the Bergen guys are infallible from up close.</p>	
 				
 				</div>	
 			</div>	
@@ -1712,7 +1648,7 @@
 				</div><!-- /header -->
 			
 			<div class="ficha-artista">
-				<p><div class="image"><img src="images/fanfarlo.jpg"></div>The band led by Swedish Simon Balthazar showed much more than promise in their debut album, <em>Reservoir</em>. Singles such as <em>The Walls Are Coming Down</em> or <em>I`m a Pilot</em> opened the door to international acknowledgement, although their success did not reach our country until their second album was released, <em>Rooms filled with light</em>, a more experimental work where the band flirts with electronica, while keeping their exquisite string and wind arrangements. Their show at Bona Nit Barcelona will be the first opportunity for Barcelona to listen to the songs which will make up their third album, currently being recorded.</p>	
+				<p><div class="image"><img src="images/fanfarlo.jpg"></div>The band led by Swedish Simon Balthazar showed much more than promise in their debut album, <em>Reservoir</em>. Singles such as <em>The Walls Are Coming Down</em> or <em>I'm a Pilot</em> opened the door to international acknowledgement, although their success did not reach our country until their second album was released, <em>Rooms filled with light</em>, a more experimental work where the band flirts with electronica, while keeping their exquisite string and wind arrangements. Their show at Bona Nit Barcelona will be the first opportunity for Barcelona to listen to the songs which will make up their third album, currently being recorded.</p>	
 				
 				</div>	
 			</div>	

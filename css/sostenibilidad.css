@@ -47,6 +47,17 @@
 
 
 
+#sponsors h4 {
+	background-color: #dad6ce;
+	padding-top: 10px;	
+	padding-bottom: 10px;		
+}
+
+#sponsors img {
+	width: 100%;
+}
+
+
 #listado-sponsors-4 {
 	text-align: center;
 	margin: auto;
@@ -59,6 +70,9 @@
 	float: left;
 	margin-bottom: 30px;
 }
+
+
+
 
 #listado-sponsors, #listado-sponsors-2 {
 	text-align: center;
@@ -76,6 +90,11 @@
 
 
 
+
+
+
+
+
 #listado-sponsors, #listado-sponsors-3 {
 	text-align: center;
 	margin: auto;
@@ -88,6 +107,9 @@
 	float: left;
 	margin-bottom: 30px;
 }	
+
+
+
 
 #como-llegar-googlemaps {
 	width: 100%;
