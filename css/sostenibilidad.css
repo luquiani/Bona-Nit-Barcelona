@@ -47,13 +47,13 @@
 
 
 
-#sponsors h4 {
+#sponsors h4, #sponsors-en h4, #sponsors-es h4 {
 	background-color: #dad6ce;
 	padding-top: 10px;	
 	padding-bottom: 10px;		
 }
 
-#sponsors img {
+#sponsors img, #sponsors-en img, #sponsors-es img {
 	width: 100%;
 }
 
@@ -88,13 +88,6 @@
 }	
 
 
-
-
-
-
-
-
-
 #listado-sponsors, #listado-sponsors-3 {
 	text-align: center;
 	margin: auto;
@@ -107,6 +100,9 @@
 	float: left;
 	margin-bottom: 30px;
 }	
+
+
+
 
 
 
