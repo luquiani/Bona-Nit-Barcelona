@@ -2,12 +2,12 @@
 <widget xmlns	= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		    = "com.menosquecero.bonanitbarcelona"
-	version 	= "1.0.2">
+	version 	= "1.0.3">
 
     <name>Bona Nit</name>
 
     <description>
-        Bon Nit Barcelona Festival Application v1.0.2
+        Bon Nit Barcelona Festival Application v1.0.3
     </description>
 
     <author href="http://menosquecero.es" email="development@menosquecero.es">
